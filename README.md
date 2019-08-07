@@ -14,7 +14,7 @@ The objective of this package is to give statistical probability of having a giv
 * **tableprint**
 ### PIP
 ```
-pip install apt_stats
+pip install apt-stats
 ```
 ## Usage 
 ### Defining the material
