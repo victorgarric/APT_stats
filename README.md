@@ -35,7 +35,7 @@ al_6061=apt.material({'Mg':0.0085,
 #Setting the maxiumum multiple ions combinations and lowest acceptable probability
 depth=3
 low=1E-7
-#Calculation and storage
+#Calculation
 res=apt.calc(al_6061,depth,low)
 #Adding charges to the calculation, considering three charges as maximum possibility
 res=apt.charge_calculation(r,(1,3))
