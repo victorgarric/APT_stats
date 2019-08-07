@@ -38,7 +38,7 @@ low=1E-7
 #Calculation
 res=apt.calc(al_6061,depth,low)
 #Adding charges to the calculation, considering three charges as maximum possibility
-res=apt.charge_calculation(r,(1,3))
+res=apt.charge_calculation(res,(1,3))
 ```
 ### Navigating through the results
 ```python
