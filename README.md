@@ -58,7 +58,7 @@ apt.disp_select(res,120)
 ![Console screenshot](https://github.com/victorgarric/APT_stats/blob/master/image/2.PNG?raw=true)
 ```python
 #Graphical display arround 20<DA<30
-apt.plot_results(res,(20,60))
+apt.plot_results(res,(20,30))
 ```
 ![Graphical display](https://github.com/victorgarric/APT_stats/blob/master/image/3.PNG?raw=true)
 ## Warning !
