@@ -21,7 +21,7 @@ Therefore, during calculation of the whole possibilities or for a specific mass 
 * **tableprint**
 ### PIP
 ```
-pip install apt-stats
+pip install APT-stats==0.0.4
 ```
 ## Usage 
 ### Defining the material
