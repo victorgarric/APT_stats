@@ -1,4 +1,3 @@
-import collections
 class molecular :
 	def __init__(self,name,molecule,charge=0) :
 		self.name=name
@@ -61,16 +60,3 @@ class ion_container :
 			
 	def sort (self) :
 		self.molecules.sort()
-		
-		
-def diff_mol(mol1,mol2) :
-	conc=mol1.names+mol2.names
-	diff=list(set(conc))
-	new_mol=mol_container()
-	for molecule in diff :
-		try :
-			new_mol.add_molecule(mol1.dict[molecule])
-		except :
-			new_mol.add_molecule(mol2.dict[molecule])
-	new_mol.sort()
-	return new_mol

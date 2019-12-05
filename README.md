@@ -1,11 +1,18 @@
 
-# APT Stats  [![Generic badge](https://img.shields.io/badge/Python-2/3-blue.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Build-passing-green.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Accuracy-testing-orange.svg)](https://shields.io/)
+# APT Stats  [![Generic badge](https://img.shields.io/badge/Pytehon-2/3-blue.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Build-passing-green.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Accuracy-testing-orange.svg)](https://shilds.io/)
 A python package to calculate the probability of ions in Atomic Probe Tomography results and correlate with DA values.
 
 ## Global purpose 
 
 The objective of this package is to give statistical probability of having a given ion in an Atomic Probe Tomography mass diagram based on both the abundance of each element in the material and the natural abundance. The package provide selecting and displaying tools in order to help the user.
 
+## Lastest version
+
+A new "impurities", keyword has been added to the material definition. This way, impurities can be introduced in the material calculation :
+```python
+impurities=('Ar','Ne')
+```
+Therefore, during calculation of the whole possibilities or for a specific mass to charge ratio, impurities can be displayed. Warning has to be made that the probability levels for impurities are normalized to 1 and are not acknowledgeable as a real probability as no probability value is imputed. 
 ##  Installation
 ### Dependencies 
 * **matplotlib**
@@ -28,7 +35,7 @@ al_6061=apt.material({'Mg':0.0085,
                       'Cr':0.003,
                       'Mn':0.0008,
                       'Zn':0.0005,
-                      'Al':0.9789},wt=True)
+                      'Al':0.9789},impurities=('Ar',),wt=True)
 ```
 ### Combination calculation
 ```python
@@ -46,8 +53,8 @@ res=apt.charge_calculation(res,(1,3))
 apt.save_results(res,'res.txt')
 ```
 ```python
-#Global displaying
-apt.disp_results(res)
+#Global displaying without impurities
+apt.disp_results(res,imp=False)
 ```
 ![Console screenshot](https://github.com/victorgarric/APT_stats/blob/master/image/1.PNG?raw=true)
 
