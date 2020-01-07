@@ -35,7 +35,7 @@ al_6061=apt.material({'Mg':0.0085,
                       'Cr':0.003,
                       'Mn':0.0008,
                       'Zn':0.0005,
-                      'Al':0.9789},impurities=('Ar',),wt=True)
+                      'Al':0.9789},impurity=('Ar',),wt=True)
 ```
 ### Combination calculation
 ```python
