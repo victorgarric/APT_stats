@@ -10,7 +10,7 @@ The objective of this package is to give statistical probability of having a giv
 
 A new "impurities", keyword has been added to the material definition. This way, impurities can be introduced in the material calculation :
 ```python
-impurities=('Ar','Ne')
+impurity=('Ar','Ne')
 ```
 Therefore, during calculation of the whole possibilities or for a specific mass to charge ratio, impurities can be displayed. Warning has to be made that the probability levels for impurities are normalized to 1 and are not acknowledgeable as a real probability as no probability value is imputed. 
 ##  Installation
