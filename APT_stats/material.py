@@ -2,6 +2,11 @@ from mendeleev import element as elem
 
 
 class glob_element:
+    """
+    For material class internal usage only
+    Stocks the name, mass, abundance and inner abundance of a given atom
+    """
+
     def __init__(self, name, mass, rate, score=1.):
         self.name = name + str(mass)
         self.mass = mass
@@ -10,7 +15,19 @@ class glob_element:
 
 
 class material:
+    """
+    material class object
+
+    Material is defined by elements and their composition
+    """
+
     def __init__(self, elements, wt=True, impurity=None):
+        """
+
+        :param elements: a dictionary of elements and composition
+        :param wt: a boolean. True for weight percent, False for atomic
+        :param impurity: a list of impurities to be declared if need be
+        """
         self.elements = []
         if wt == True:
             total_n = 0
